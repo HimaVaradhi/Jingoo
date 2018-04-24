@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+  android:background="@drawable/background_selector"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:paddingBottom="3dp"
+            android:paddingTop="@dimen/activity_horizontal_margin"
+            android:text="Store 1"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+        <View
+            android:id="@+id/line"
+            android:layout_width="30dp"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tvTitle"
+            android:layout_marginLeft="32dp"
+            android:background="@color/bg" />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@+id/line"
+            android:layout_marginTop="8dp"
+            android:background="@color/line_color" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="end">
+            <ImageView
+                android:id="@+id/carbon_groupExpandedIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="#000000"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                app:srcCompat="@drawable/ic_expand_more_24dp"
+                tools:ignore="VectorDrawableCompat" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

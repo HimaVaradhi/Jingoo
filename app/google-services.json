@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "149811814494",
+    "firebase_url": "https://jingoo-5c49c.firebaseio.com",
+    "project_id": "jingoo-5c49c",
+    "storage_bucket": "jingoo-5c49c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:149811814494:android:9a8b353775569fa5",
+        "android_client_info": {
+          "package_name": "com.oodi.jingoo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "149811814494-s4ucqejq51gijduiohpkkj1eanobsfet.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.oodi.jingoo",
+            "certificate_hash": "24c98a02d2908236076337be89b691f2c5083cd7"
+          }
+        },
+        {
+          "client_id": "149811814494-uvdfhq6ehbq9fbindtqpgmq3e9tjtgsb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkioI7i-962PqxfwUme1kpLET4n4GvoJ8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "149811814494-uvdfhq6ehbq9fbindtqpgmq3e9tjtgsb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

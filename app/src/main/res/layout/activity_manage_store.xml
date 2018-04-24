@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.oodi.jingoo.activity.ManageStoreActivity">
+
+    <include layout="@layout/coomon_header"
+        android:id="@+id/i1"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recStockList"
+        android:layout_above="@+id/btnManageStore"
+        android:layout_below="@+id/i1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/lnrAdd"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/plus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            />
+
+        <TextView
+            android:textSize="12sp"
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:text="@string/add"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</RelativeLayout>

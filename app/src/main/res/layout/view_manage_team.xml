@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/lnrStock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="90dp">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_marginRight="8dp"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:id="@+id/imgDp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/j1"
+                    android:tint="@color/black"
+                    app:civ_border_width="0dp" />
+
+                <TextView
+                    android:visibility="invisible"
+                    android:id="@+id/txtBadge"
+                    android:layout_gravity="end"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/avatar_bg"
+                    android:text="S"
+                    android:textSize="25sp"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginBottom="2dp"
+                    android:text="dfdf"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:id="@+id/txtCategoryName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="35dp"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_marginTop="2dp"
+                    android:text="dfdf"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:id="@+id/txtStoreName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="35dp"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imgEdit"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:src="@drawable/edit" />
+
+            <ImageView
+                android:id="@+id/imgDelete"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:src="@drawable/rubbish" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/line_color"/>
+
+</LinearLayout>

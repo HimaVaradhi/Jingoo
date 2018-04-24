@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.oodi.jingoo.activity.CustomerCareActivity">
+
+    <include layout="@layout/coomon_header"
+        android:id="@+id/i1"/>
+
+    <ImageView
+        android:padding="@dimen/activity_horizontal_margin"
+        android:src="@drawable/cc_logo"
+        android:layout_weight="1"
+        android:id="@+id/i2"
+        android:layout_below="@+id/i1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/i2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tell_us_more"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:textSize="16sp"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_issue"
+                android:textColor="@color/black"
+                android:layout_gravity="center"/>
+
+            <RadioGroup
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/r1"
+                    android:textSize="16sp"
+                    android:buttonTint="@color/header_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Technical_App_Issue"/>
+
+                <RadioButton
+                    android:id="@+id/r2"
+                    android:textSize="16sp"
+                    android:buttonTint="@color/header_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Understanding_Rewards_Points"/>
+
+                <RadioButton
+                    android:id="@+id/r3"
+                    android:textSize="16sp"
+                    android:buttonTint="@color/header_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Product_Quality_Issue"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

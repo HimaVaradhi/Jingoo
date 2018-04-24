@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    tools:context="com.oodi.jingoo.activity.AddTeamActivity">
+
+    <include layout="@layout/coomon_header"
+        android:id="@+id/i1"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_below="@+id/i1"
+        android:layout_above="@+id/txtDoItLater"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edtName"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/name"
+            android:textColor="@color/black"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <EditText
+            android:layout_weight="1"
+            android:id="@+id/edtPhoneNumber"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:inputType="number"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/phone_number"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:id="@+id/imgShare"
+            android:src="@drawable/call"
+            android:layout_gravity="end|bottom"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            />
+
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/edtSetPassword"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:inputType="textPassword"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/Set_Initial_Password"
+            android:textColor="@color/black"/>
+
+        <View
+            android:visibility="gone"
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            />
+
+        <TextView
+            android:id="@+id/txtLocation"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/location"
+            android:textColor="@color/black"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            />
+
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/edtEmail"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/email_address"
+            android:textColor="@color/black"/>
+
+        <View
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            />
+
+        <TextView
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:textSize="16sp"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="@string/give_access1"
+            android:textColor="@color/black"/>
+
+        <RadioGroup
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <RadioButton
+                android:checked="true"
+                android:id="@+id/r1"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:text="@string/yes"
+                android:buttonTint="#5CD2C1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+            <RadioButton
+                android:id="@+id/r2"
+                android:text="@string/no"
+                android:buttonTint="#5CD2C1"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            />
+
+        <TextView
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:textSize="16sp"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="@string/give_access2"
+            android:textColor="@color/black"/>
+
+        <RadioGroup
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <RadioButton
+                android:checked="true"
+                android:id="@+id/r3"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:text="@string/yes"
+                android:buttonTint="#5CD2C1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+            <RadioButton
+                android:id="@+id/r4"
+                android:text="@string/no"
+                android:buttonTint="#5CD2C1"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            />
+
+        <TextView
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:textSize="16sp"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="@string/give_access3"
+            android:textColor="@color/black"/>
+
+        <RadioGroup
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <RadioButton
+                android:checked="true"
+                android:id="@+id/r5"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:text="@string/yes"
+                android:buttonTint="#5CD2C1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+            <RadioButton
+                android:id="@+id/r6"
+                android:text="@string/no"
+                android:buttonTint="#5CD2C1"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            />
+
+        <ImageView
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:id="@+id/imgDelete"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/rubbish"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/txtDelete"
+            android:layout_marginTop="3dp"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="DELETE"/>
+
+    </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <TextView
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:id="@+id/txtDoItLater"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Do_It_Later"
+        android:gravity="center"
+        android:layout_above="@+id/btnDone"/>
+
+    <Button
+        android:visibility="invisible"
+        android:id="@+id/btnDone"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg"
+        android:textColor="@color/white"
+        android:text="@string/done"/>
+
+    <ImageView
+        android:id="@+id/imgWt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/en_create_team"/>
+
+</RelativeLayout>

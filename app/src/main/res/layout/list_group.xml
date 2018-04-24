@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/activity_horizontal_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/imgCat"
+        app:civ_border_width="0dp"
+        android:layout_width="65dp"
+        android:layout_height="65dp" />
+
+    <TextView
+        android:layout_weight="1"
+        android:singleLine="true"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:text="LOREM IPSUM"
+        android:gravity="center_vertical"
+        android:id="@+id/group_name"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:textSize="18sp"
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:id="@+id/imgIndicator"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

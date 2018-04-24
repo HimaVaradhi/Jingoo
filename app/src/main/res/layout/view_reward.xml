@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/activity_horizontal_margin">
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:src="@mipmap/ic_logo"
+                    android:layout_gravity="center"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
+
+                <TextView
+                    android:id="@+id/txtStock"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/bg"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/txtPoints"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/bg"
+                    android:textSize="16sp"/>
+
+                <LinearLayout
+                    android:layout_marginRight="8dp"
+                    android:id="@+id/lnr1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtMyPoint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/You_have_reached"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginRight="8dp"
+                    android:visibility="gone"
+                    android:id="@+id/lnr2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtCurrentPoints"
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Current Points: 1730 pts"/>
+
+                    <TextView
+                        android:id="@+id/txtTargetPoints"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Points to reach target: 1270 pts"/>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        app:cardCornerRadius="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <ProgressBar
+                        android:progressDrawable="@drawable/custom_progressbar"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:id="@+id/pb"
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+                        />
+
+                    </android.support.v7.widget.CardView>
+
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtPercentage"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnRedeem"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg"
+            android:textColor="@color/white"
+            android:text="@string/REDEEM_NOW"/>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

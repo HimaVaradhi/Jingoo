@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UPDATE AVAILABLE "
+
+            android:textSize="16dp"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:textColor="#4A4A4A"
+            android:gravity="center"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="We&apos;ve made some amazing updates to our app. Before you can use the app again we&apos;ll need you to update to latest version."
+
+                android:textSize="16dp"
+                android:padding="5dp"
+                android:textColor="#4A4A4A"
+                android:layout_weight="1"
+                android:layout_marginBottom="5dp"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UPDATE"
+            android:id="@+id/btn_confirm"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:background="@color/bg"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

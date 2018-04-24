@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:focusableInTouchMode="true"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context="com.oodi.jingoo.activity.ReferalCodeActivity">
+
+    <include layout="@layout/coomon_header"
+        android:id="@+id/i1"/>
+
+    <TextView
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:id="@+id/t1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="@string/Enter_Details"
+        android:textSize="18sp"
+        android:padding="@dimen/activity_vertical_margin"
+        android:layout_below="@+id/i1"/>
+
+    <ScrollView
+        android:layout_below="@+id/t1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:padding="@dimen/activity_vertical_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:visibility="gone"
+                android:id="@+id/f1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:hint="@string/Phone_Number"
+                    android:id="@+id/txtPhoneNumber"
+                    android:paddingRight="40dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/referralbg"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:gravity="center_vertical"/>
+
+                <ImageView
+                    android:padding="8dp"
+                    android:src="@drawable/call"
+                    android:layout_gravity="end"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/f2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:hint="@string/Phone_Number"
+                    android:id="@+id/edtPhoneNumber"
+                    android:paddingRight="40dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/referralbg"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:gravity="center_vertical"/>
+
+                <ImageView
+                    android:id="@+id/imgShare"
+                    android:padding="8dp"
+                    android:src="@drawable/call"
+                    android:layout_gravity="end"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+
+            </FrameLayout>
+
+            <EditText
+                android:id="@+id/edtOwnerName"
+                android:inputType="text"
+                android:textSize="14sp"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:hint="@string/Owner_Name"
+                android:paddingRight="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/referralbg"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:gravity="center_vertical"/>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lnrDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:inputType="text"
+                    android:id="@+id/edtShopName"
+                    android:textSize="14sp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:hint="@string/Shop_Name"
+                    android:paddingRight="40dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/referralbg"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:gravity="center_vertical"/>
+
+                <EditText
+                    android:id="@+id/edtState"
+                    android:inputType="text"
+
+                    android:textSize="14sp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:hint="@string/state"
+                    android:paddingRight="40dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/referralbg"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:gravity="center_vertical"/>
+
+                <EditText
+                    android:id="@+id/edtCity"
+                    android:inputType="text"
+
+                    android:textSize="14sp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:hint="@string/city"
+                    android:paddingRight="40dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/referralbg"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:gravity="center_vertical"/>
+
+
+
+            </LinearLayout>
+
+            <Button
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:id="@+id/btnShare"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg"
+                android:textColor="@color/white"
+                android:text="@string/Refer"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.oodi.jingoo.activity.CCProductQualityIssueActivity">
+
+    <include layout="@layout/coomon_header"
+        android:id="@+id/i1"/>
+
+    <TextView
+        android:paddingTop="32dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:paddingBottom="@dimen/activity_horizontal_margin"
+        android:id="@+id/t1"
+        android:layout_below="@+id/i1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Product_Quality_Issue"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="22sp"/>
+
+    <TextView
+        android:id="@+id/t2"
+        android:paddingRight="32dp"
+        android:paddingLeft="32dp"
+        android:layout_below="@+id/t1"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_product_issue"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:imeOptions="actionDone"
+        android:inputType="textAutoComplete"
+        android:layout_below="@+id/t2"
+        android:id="@+id/edtSearch"
+        android:singleLine="true"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp"
+        android:textSize="13sp"
+        android:textAllCaps="true"
+        android:hint="@string/search"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/search_bg_img"/>
+
+    <ImageView
+        android:padding="13dp"
+        android:src="@drawable/search_icon"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/t2"
+        android:layout_marginLeft="32dp"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/txtCancle"
+        android:text="X"
+        android:padding="13dp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/t2"
+        android:layout_marginRight="32dp"
+        android:layout_alignParentRight="true" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recStockList"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/edtSearch"></android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

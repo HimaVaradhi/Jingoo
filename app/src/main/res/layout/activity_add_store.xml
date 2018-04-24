@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:background="@color/white"
+    tools:context="com.oodi.jingoo.activity.AddStoreActivity">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="240dp" />
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:src="@drawable/pin"
+        android:visibility="visible"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+    
+    <LinearLayout
+        android:background="#90CA282B"
+        android:gravity="bottom"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout">
+
+        <LinearLayout
+            android:id="@+id/lnrHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <ImageView
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_home"/>
+
+        <TextView
+            android:id="@+id/txtHome"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="@string/store"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:singleLine="true"
+        android:id="@+id/txtMapLocation"
+        android:background="#90CA282B"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textColor="@color/white"
+        android:hint="Location"
+        android:textColorHint="@color/white"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_alignBottom="@+id/mapView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_above="@+id/btnDone"
+        android:layout_below="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:background="@null"
+                android:id="@+id/txtLocation"
+                android:hint="@string/name"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                />
+
+            <TextView
+                android:background="@null"
+                android:id="@+id/txtState"
+                android:hint="@string/state"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                />
+
+            <EditText
+                android:inputType="text"
+                android:background="@null"
+                android:id="@+id/edtDistrict"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/District"
+                android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                />
+
+            <EditText
+                android:id="@+id/edtDepot"
+                android:background="@null"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:inputType="text"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Depot"
+                android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                />
+
+            <EditText
+                android:id="@+id/edtLicenceNumber"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:inputType="text"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/Licen_Number"
+                android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                />
+
+            <ImageView
+                android:id="@+id/imgDelete"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/rubbish"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/txtDelete"
+                android:layout_marginTop="3dp"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="DELETE"/>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <Button
+        android:id="@+id/btnDone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg"
+        android:textColor="@color/white"
+        android:text="@string/done"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

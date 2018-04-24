@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipChildren="true"
+    tools:context="com.oodi.jingoo.activity.NotificationsActivity">
+
+    <ImageView
+        android:id="@+id/i1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/header" />
+
+    <TextView
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:paddingBottom="3dp"
+        android:typeface="normal"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/notification"
+        android:textSize="18sp"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_toRightOf="@+id/imageView2"
+        android:layout_toEndOf="@+id/imageView2" />
+    
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="170dp"
+        android:layout_height="65dp" />
+
+    <ImageView
+        android:id="@+id/imgBack"
+        android:padding="7dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/back_arrow"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="7dp"
+        android:layout_marginEnd="7dp" />
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_home"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:id="@+id/imageView2" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_below="@+id/i1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"></android.support.v4.view.ViewPager>
+
+    <ExpandableListView
+        android:groupIndicator="@null"
+        android:divider="@null"
+        android:layout_below="@+id/pager"
+        android:id="@+id/lvExp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:visibility="gone"
+        android:background="@color/grey_text"
+        android:id="@+id/recyclerview"
+        android:layout_above="@+id/btnManageStore"
+        android:layout_below="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

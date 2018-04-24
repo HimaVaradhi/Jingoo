@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context="com.oodi.jingoo.activity.IntroAppActivity">
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/startingPager">
+
+    </android.support.v4.view.ViewPager>
+
+    <TextView
+        android:id="@+id/txtSkip"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_alignParentRight="true"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/bg"
+        android:text="@string/skip"/>
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btnDone"
+        android:textColor="@color/white"
+        android:text="LET'S GO!"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:background="@color/bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <com.github.vivchar.viewpagerindicator.ViewPagerIndicator
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_alignParentBottom="true"
+        android:id = "@+id/view_pager_indicator"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_gravity = "center"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        app:delimiterSize = "8dp"
+        app:itemScale = "1.5"
+        app:itemSelectedTint = "@color/bg"
+        app:itemSize = "8dp"
+        app:itemTint = "@color/grey_text"
+        />
+
+
+</RelativeLayout>

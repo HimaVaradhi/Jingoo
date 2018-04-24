@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+
+    <color name="bg">#CA282B</color>
+    <color name="tab_bg">#696969</color>
+    <color name="tb">#dcdce6</color>
+    <color name="home_bg">#F4F3F8</color>
+    <color name="search_bg">#E0E0EA</color>
+    <color name="header_bg">#0078B0</color>
+    <color name="views_bg">#F2F2F2</color>
+    <color name="grey_text">#bebebe</color>
+    <color name="line_color">#F4F4F8</color>
+
+    <color name="dist">#5cd2c1</color>
+    <color name="depot">#f6ae55</color>
+    <color name="state">#9083ff</color>
+
+    <color name="ml750">#e8aaa8</color>
+    <color name="ml500">#d96869</color>
+    <color name="ml250">#cd3738</color>
+
+    <color name="l1">#44FFD0D0</color>
+    <color name="l2">#44E89D9D</color>
+
+</resources>

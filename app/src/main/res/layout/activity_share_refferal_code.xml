@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.oodi.jingoo.activity.ShareRefferalCodeActivity">
+
+    <include layout="@layout/coomon_header"
+        android:id="@+id/i1"/>
+
+
+    <LinearLayout
+        android:layout_below="@+id/i1"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtRefer"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Refer Friends,\nWin Rewards!"/>
+
+        <TextView
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/shareandwin"/>
+
+        <LinearLayout
+            android:id="@+id/txtHowWorks"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:tint="@color/dist"
+                android:src="@drawable/ic_help"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/dist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/how_point_works"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:id="@+id/lnrHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="3dp"
+                android:src="@drawable/hist" />
+
+            <TextView
+                android:id="@+id/txtHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:text="@string/View_History"
+                android:textColor="@color/bg"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_weight="1"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/groupreferral"/>
+
+        <FrameLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtCode"
+                android:paddingRight="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/referralbg"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:gravity="center_vertical"/>
+
+            <ImageView
+                android:id="@+id/imgShare"
+                android:padding="8dp"
+                android:src="@drawable/share"
+                android:layout_gravity="end"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/btnWhatsapp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg"
+            android:textColor="@color/white"
+            android:text="@string/Refer"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

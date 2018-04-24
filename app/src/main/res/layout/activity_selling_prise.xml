@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.oodi.jingoo.activity.SellingPriseActivity">
+
+    <include layout="@layout/coomon_header"
+        android:id="@+id/i1"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/i1"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:id="@+id/recShopList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <TextView
+        android:layout_below="@+id/recShopList"
+        android:id="@+id/txtCopy"
+        android:textColor="@color/black"
+        android:layout_marginRight="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/copy_from"
+        android:layout_alignParentRight="true" />
+   <!-- <LinearLayout
+    android:id="@+id/search_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/search_view"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:hint="Search"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:maxLines="1"
+            android:paddingLeft="2dp"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textColorHint="#b3ffffff" />
+
+        <ImageView
+            android:id="@+id/search_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:src="@drawable/imgcancel" />
+    </LinearLayout>-->
+
+    <EditText
+        android:imeOptions="actionDone"
+        android:inputType="textAutoComplete"
+        android:id="@+id/edtSearch"
+        android:layout_below="@+id/txtCopy"
+        android:singleLine="true"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:textAllCaps="true"
+        android:hint="@string/search_product"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/search_bg_img"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/txtCancle"
+        android:text="X"
+        android:padding="13dp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/recShopList"
+        android:layout_marginRight="32dp"
+        android:layout_alignParentRight="true" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_above="@+id/txtDoItLater"
+        android:layout_below="@+id/edtSearch"
+        android:id="@+id/recSellingPrise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:id="@+id/txtDoItLater"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Do_It_Later"
+        android:gravity="center"
+        android:layout_above="@+id/btnUpdate"/>
+
+    <Button
+        android:visibility="invisible"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:background="@color/bg"
+        android:textColor="@color/white"
+        android:text="@string/update_"
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+    <ImageView
+        android:id="@+id/imgWt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/en_selling_price_new"/>
+
+</RelativeLayout>

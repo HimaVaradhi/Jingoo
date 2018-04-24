@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context="com.oodi.jingoo.activity.StoreAnalyticsActivity">
+
+    <include layout="@layout/coomon_header"
+        android:id="@+id/i1"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/i1"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:id="@+id/recShopList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_below="@+id/recShopList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/lnrTS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:textAllCaps="true"
+                android:textSize="11sp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sales"/>
+
+            <TextView
+                android:id="@+id/txtTSline"
+                android:layout_marginTop="5dp"
+                android:background="@color/bg"
+                android:layout_width="30dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnrRefill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1.3">
+
+            <TextView
+                android:textAllCaps="true"
+                android:textSize="11sp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ANALYTICS"/>
+
+            <TextView
+                android:id="@+id/txtRefillLine"
+                android:layout_width="30dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@color/bg"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnrCS"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:textAllCaps="true"
+                android:textSize="11sp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/closing_stock"/>
+
+            <TextView
+                android:id="@+id/txtCSline"
+                android:layout_width="30dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@color/bg"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:id="@+id/l2"
+        android:layout_below="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtStartDate"
+            android:textSize="10sp"
+            android:background="@drawable/view_date"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:textAllCaps="true"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:padding="8dp"
+            android:text="@string/start_date"/>
+
+        <TextView
+            android:id="@+id/txtEndDate"
+            android:textSize="10sp"
+            android:background="@drawable/view_date"
+            android:gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"
+            android:textAllCaps="true"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:padding="8dp"
+            android:text="@string/end_date"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="end"
+        android:layout_below="@+id/l2"
+        android:id="@+id/l4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgQty"
+            android:src="@drawable/ic_qty_selected"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="8dp"/>
+
+        <ImageView
+            android:id="@+id/imgValue"
+            android:padding="3dp"
+            android:src="@drawable/ic_value_unselected"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_below="@+id/l4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <WebView
+                android:id="@+id/webLnC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="WebViewLayout"></WebView>
+
+            <com.oodi.jingoo.expandrecycleview.ExpandableRecyclerView
+                android:layout_below="@+id/l4"
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+                android:divider="@android:color/holo_red_dark"
+                android:dividerHeight="0.5dp" >
+
+            </com.oodi.jingoo.expandrecycleview.ExpandableRecyclerView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/imgWt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/reports_wt"/>
+
+</RelativeLayout>

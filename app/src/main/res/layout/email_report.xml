@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="@string/email_report"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/txtClose"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="X"
+            android:layout_width="45dp"
+            android:layout_height="45dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:text="@string/start_date"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/txtStartDate"
+            android:textSize="10sp"
+            android:background="@drawable/view_date"
+            android:layout_weight="1"
+            android:textAllCaps="true"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:padding="8dp"
+            android:text="@string/start_date"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:text="@string/end_date"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/txtEndDate"
+            android:textSize="10sp"
+            android:background="@drawable/view_date"
+            android:layout_weight="1"
+            android:textAllCaps="true"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:padding="8dp"
+            android:text="@string/start_date"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnDone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg"
+        android:textColor="@color/white"
+        android:text="@string/submit"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_alignParentBottom="true"/>
+
+</LinearLayout>

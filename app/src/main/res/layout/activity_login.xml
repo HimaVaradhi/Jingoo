@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:id="@+id/r"
+    android:focusableInTouchMode="true"
+    tools:context="com.oodi.jingoo.activity.LoginActivity">
+
+    <include layout="@layout/common_login"
+        android:id="@+id/i1"/>
+
+    <ScrollView
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_above="@+id/l2"
+        android:id="@+id/l1"
+        android:layout_below="@+id/i1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:visibility="gone"
+            android:textSize="13sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone"
+            android:gravity="center"/>
+
+        <EditText
+            android:hint="Phone Number"
+            android:textSize="16sp"
+            android:id="@+id/edtUsername"
+            android:inputType="number"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/login_bg"
+            android:textColor="@color/black"
+            android:gravity="center"/>
+
+        <View
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/p"
+            android:textSize="13sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:gravity="center"/>
+
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:background="@null"
+            android:gravity="center"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <View
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            />
+
+        <TextView
+            android:visibility="gone"
+            android:textSize="13sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Referral Code"
+            android:gravity="center"/>
+
+        <EditText
+            android:visibility="gone"
+            android:hint="Referral Code (Optional)"
+            android:inputType="number"
+            android:id="@+id/edtReferral"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:background="@drawable/login_bg"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <View
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/txtForgotPassword"
+            android:textColor="@color/bg"
+            android:layout_gravity="center"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FORGOT PASSWORD"/>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/l2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:id="@+id/btnSignIn"
+            android:textColor="@color/white"
+            android:text="SIGN IN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg"/>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+           <CheckBox
+               android:checked="true"
+               android:id="@+id/cbTaC"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:buttonTint="@color/bg"/>
+
+            <TextView
+                android:id="@+id/txtTaC"
+                android:paddingTop="@dimen/activity_horizontal_margin"
+                android:paddingBottom="@dimen/activity_horizontal_margin"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="I AGREE TO THE TERMS &amp; CONDITION"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

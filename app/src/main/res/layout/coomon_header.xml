@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/i1"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/header" />
+
+    <TextView
+        android:typeface="normal"
+        android:layout_marginTop="86dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/create_new"
+        android:textSize="30sp"
+        android:id="@+id/txtHeaderName"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/imgBack"
+        android:padding="7dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/back_arrow"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="7dp"
+        android:layout_marginEnd="7dp" />
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_home"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="7dp"
+        android:layout_marginLeft="7dp"
+        android:id="@+id/imageView3" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/txtHome"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imageView3"
+        android:layout_toEndOf="@+id/imageView3" />
+
+    <ImageView
+        android:id="@+id/imgHelp"
+        android:src="@drawable/ic_help"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imageView3"
+        android:layout_toEndOf="@+id/imageView3" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/Home"
+        android:layout_width="150dp"
+        android:layout_height="60dp" />
+
+</RelativeLayout>

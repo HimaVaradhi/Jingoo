@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    tools:context="com.oodi.jingoo.activity.TakeStockListActivity">
+
+    <ImageView
+        android:id="@+id/i1"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/header" />
+
+    <TextView
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:singleLine="true"
+        android:layout_centerHorizontal="true"
+        android:typeface="normal"
+        android:layout_marginTop="86dp"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true" />
+
+    <ImageView
+        android:layout_marginTop="86dp"
+        android:id="@+id/imgPrevious"
+        android:padding="8dp"
+        android:src="@drawable/left"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_marginTop="86dp"
+        android:id="@+id/imgNext"
+        android:padding="8dp"
+        android:src="@drawable/right"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:id="@+id/imgBack"
+        android:padding="7dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/back_arrow"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="7dp"
+        android:layout_marginEnd="7dp" />
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_home"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="7dp"
+        android:layout_marginLeft="7dp"
+        android:id="@+id/imageView3" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/txtHome"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="dhdfhdfdd"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imageView3"
+        android:layout_toEndOf="@+id/imageView3" />
+
+  <ImageView
+        android:id="@+id/imgHelp"
+        android:src="@drawable/ic_help"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imageView3"
+        android:layout_toEndOf="@+id/imageView3" />
+  <!--  <EditText
+        android:imeOptions="actionDone"
+        android:inputType="textAutoComplete"
+        android:id="@+id/edtSearch"
+        android:layout_below="@+id/imgHelp"
+        android:singleLine="true"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:textAllCaps="true"
+        android:hint="@string/search_product"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/search_bg_img"/>-->
+  <EditText
+        android:id="@+id/edtSearch"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/recTakeStock"
+        android:layout_marginBottom="-49dp"
+        android:background="@drawable/search_bg_img"
+        android:gravity="center"
+      android:layout_marginRight="32dp"
+      android:layout_marginLeft="32dp"
+        android:hint="@string/search_product"
+        android:imeOptions="actionDone"
+        android:inputType="textAutoComplete"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:singleLine="true"
+        android:textAllCaps="true"
+        android:textSize="12sp" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recTakeStock"
+        android:layout_width="match_parent"
+        android:layout_height="288dp"
+        android:layout_above="@+id/btnSubmit"
+        android:layout_below="@+id/i1"
+        android:layout_marginTop="49dp"
+        android:paddingTop="8dp"></android.support.v7.widget.RecyclerView>
+
+    <Button
+        android:visibility="invisible"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg"
+        android:textColor="@color/white"
+        android:text="@string/submit"
+        android:layout_alignParentBottom="true"/>
+
+ <ImageView
+        android:id="@+id/imgWt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/cswt" />
+
+</RelativeLayout>

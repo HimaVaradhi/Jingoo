@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:focusableInTouchMode="true"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context="com.oodi.jingoo.activity.CCTechAppIssueActivity">
+
+    <include layout="@layout/coomon_header"
+        android:id="@+id/i1"/>
+
+    <ScrollView
+        android:layout_above="@+id/btnSubmit"
+        android:layout_below="@+id/i1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:padding="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Technical_App_Issue"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:textSize="16sp"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tell_us_more1"
+                android:textColor="@color/black"/>
+
+            <RadioGroup
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/r1"
+                    android:textSize="16sp"
+                    android:buttonTint="@color/header_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tell_us_more2"/>
+
+                <RadioButton
+                    android:id="@+id/r2"
+                    android:textSize="16sp"
+                    android:buttonTint="@color/header_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tell_us_more3"/>
+
+                <RadioButton
+                    android:id="@+id/r3"
+                    android:textSize="16sp"
+                    android:buttonTint="@color/header_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Unable_reports"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:text="@string/other"
+                android:textSize="16sp"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:gravity="top|left"
+                android:maxLines="4"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:hint="@string/what_wrong"
+                android:inputType="textMultiLine"
+                android:id="@+id/edtIssue"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/login_bg"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:id="@+id/btnSubmit"
+        android:textColor="@color/white"
+        android:text="@string/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg"/>
+
+</RelativeLayout>
