@@ -583,19 +583,8 @@ public class ChooseSupliersActivity extends AppCompatActivity {
                             mRecSuppliers.setLayoutManager(mLayoutManager);
                             mRecSuppliers.setAdapter(mChooseSupplierListAdapter);
 
-                                                         if (isNotAdded) {
-                                                             final View headerView = getLayoutInflater().inflate(R.layout.selectall_list_view_header,
-                                                                     mRecSuppliers, false);
 
-                                                             chk_select_all = (CheckBox) headerView.findViewById(R.id.filter_select_all);
-                                chk_select_all.setOnClickListener(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View v) {
-                                        for (int i = 0; i < count; i++) {
-                                            mChecked.put(i, chk_select_all.isChecked());
-                                        }
-
-                                /*    if (chk_select_all.isChecked()) {
+                                   if (chk_select_all.isChecked()) {
 
                                         for (Supplier supplier : mSupplierList) {
                                             supplier.setSelected(true);
@@ -605,17 +594,12 @@ public class ChooseSupliersActivity extends AppCompatActivity {
                                         for (Supplier supplier : mSupplierList) {
                                             supplier.setSelected(false);
                                         }
-                                    }*/
+                                    }
 
                                         mChooseSupplierListAdapter.notifyDataSetChanged();
-                                    }
-                                });
-                                                             /*
-                                                              * Add Header to ListView
-                                                              */
-                                                           //  mRecSuppliers.addHeaderView(headerView);
-                                                             isNotAdded = false;
-                            }
+
+
+
 
                             /*RecyclerView.LayoutManager mLayoutManager1 = new GridLayoutManager(ChooseSupliersActivity.this , 3);
                             mRecSuppliers.setLayoutManager(mLayoutManager1);
