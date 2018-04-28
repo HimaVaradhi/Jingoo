@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context="com.oodi.jingoo.activity.ChooseSupliersActivity">
-
     <include layout="@layout/coomon_header"
         android:id="@+id/i1"/>
 
@@ -93,7 +92,6 @@
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:orientation="horizontal">
-
         <TextView
             android:id="@+id/txtCopy"
             android:textColor="@color/black"
@@ -102,14 +100,12 @@
             android:layout_height="fill_parent"
             android:gravity="center"
             android:text="@string/copy_from"/>
-
         <ImageView
             android:id="@+id/imgList"
             android:src="@drawable/ic_list_selected"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginRight="8dp"/>
-
         <ImageView
             android:padding="3dp"
             android:id="@+id/imgGrid"
@@ -117,9 +113,28 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginRight="@dimen/activity_horizontal_margin"/>
-
     </LinearLayout>
-
+    <LinearLayout
+        android:layout_below="@+id/l4"
+        android:gravity="end"
+        android:id="@+id/select"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/filter_select_all"
+        android:text="Select All"
+        android:textColor="@color/bg"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"
+        android:layout_alignParentRight="true"
+        android:textAllCaps="false"
+        android:layout_marginRight="10dp"
+        android:visibility="visible"
+        android:focusable="false"/>
+    </LinearLayout>
     <android.support.v7.widget.RecyclerView
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
@@ -129,7 +144,7 @@
         android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/l4"
+        android:layout_below="@+id/select"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"></android.support.v7.widget.RecyclerView>
 

@@ -271,12 +271,10 @@ public class RewardListAdapter extends RecyclerView.Adapter<RewardListAdapter.My
                 Map<String,String> params = new HashMap<String, String>();
                 params.put(KEY_USERNAME,token);
                 params.put("reward_id" , reward_id);
-
                 return params;
             }
 
         };
-
         RequestQueue requestQueue = Volley.newRequestQueue(mContext.getActivity());
         requestQueue.add(stringRequest);
     }

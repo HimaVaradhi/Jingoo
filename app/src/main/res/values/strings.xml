@@ -73,11 +73,8 @@
     <string name="choose_new_password">Choose New Password</string>
     <string name="skip">Skip</string>
     <string name="termsandconditions">Terms and Conditions</string>
-
     <string name="Winning_Criteria">Winning Criteria:</string>
-
     <string name="p1">A. 100+ SKU data entry daily.</string>
-
     <string name="t1">YOOFY V4 POC duration is from 5th Feb 2018 for a month. This duration may be extended by 2 weeks in case of any technical issues are identified with YOOFY requiring more time to get feedback.</string>
     <string name="t2">Assured rewards will be given to all 3 CSMs and the owner/manager of the outlet.</string>
     <string name="t3">Participating outlets must ensure data entry corresponding to at least 100 SKUs for at least 20 days during the POC (25 days in case of extended POC) to qualify for rewards.</string>
@@ -85,9 +82,7 @@
     <string name="t5">All participating outlets will have to register with YOOFY coordinator. Only registered outlets will be eligible for rewards.</string>
     <string name="t6">Winners would be announced at the end of the POC. The rewards will be presented to winners in a separate ceremony after the end of the POC. </string>
     <string name="t7">The decision of the JIL management shall be final and binding in all respects.</string>
-
     <string name="p2">B. 30+ SKU data entry daily</string>
-
     <string name="t1_p2">YOOFY V4 POC duration is from 5th Feb 2018 for a month. This duration may be extended by 2 weeks in case of any technical issues are identified with YOOFY requiring more time to get feedback.</string>
     <string name="t2_p2">Top 3 CSMs will be eligible for bumper rewards (First: Smartphone, Second: LCD TV, Third: Bluetooth speaker).</string>
     <string name="t3_p2">Participating outlets must ensure data entry corresponding to at least 30 SKUs for at least 20 days during the POC (25 days in case of extended POC) to qualify for rewards.</string>
@@ -100,11 +95,8 @@
     <string name="t10_p2">In case, the data submission is found to be incorrect, the concerned CSM will not be eligible to receive any points / rewards.</string>
     <string name="t11_p2">Winners would be announced at the end of the POC. The rewards will be presented to winners in a separate ceremony after the end of the POC. </string>
     <string name="t12_p2">The decision of the JIL management shall be final and binding in all respects.</string>
-
-
     <string name="t8">Winners would be announced at the end of the POC. The rewards will be presented to winners in a separate ceremony after the end of the POC.</string>
     <string name="t9">The decision of the JIL management shall be final and binding in all respects.</string>
-
     <string name="offline">Please check Data/WiFi connection and try again.</string>
     <string name="reports">Reports</string>
     <string name="city">City</string>
@@ -164,17 +156,13 @@
     <string name="Set_Selling_Price">2.Set Selling Price</string>
     <string name="Create_Your_Team">3.Create Your Team</string>
     <string name="Create_Your_Team_">Create Your Team</string>
-    <string name="Choose_Your_Brands_">Choose Brands you sell</string>
+    <string name="Choose_Your_Brands_">Choose Brands You Sell</string>
     <string name="Set_Selling_Price_">Set Selling Price</string>
-
     <string name="csm_first_time">This the first time you are using the app, so you will need to enter current stock details.</string>
-
-
     <string name="Help">Help</string>
     <string name="Stock_Reports">Stock Reports</string>
     <string name="no_sale">There has been no sale or purchase activity during this period.</string>
     <string name="no_select">Some brands are here to stay</string>
-
     <string name="tell_us_more">Tell Us More</string>
     <string name="choose_issue">Choose what kind of issue you are facing</string>
     <string name="Technical_App_Issue">Technical App Issue</string>
@@ -186,14 +174,12 @@
     <string name="tell_us_more3">Unable to update product information</string>
     <string name="tell_us_more4">Please provide details of the quality issues:</string>
     <string name="choose_product_issue">Choose the product that you are having an issue with from the list below.</string>
-
     <string name="Unable_reports">Unable to view reports</string>
     <string name="other">Other:</string>
     <string name="what_wrong">Tell us whats wrong..</string>
     <string name="SUBMIT_CALL">SUBMIT &amp; REQUEST A CALL</string>
     <string name="email_report">Email Reports</string>
     <string name="copy_from">Copy from another store</string>
-
     <string name="Leaderboard">Leaderboard</string>
     <string name="YOUR_POINTS">YOOFY WALLET</string>
     <string name="your_scrore">Your Yoofy Wallet</string>

@@ -15,13 +15,17 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.CheckBox;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -34,6 +38,7 @@ import com.oodi.jingoo.adapter.ChooseSuplierAdapter;
 import com.oodi.jingoo.adapter.ChooseSupplierListAdapter;
 import com.oodi.jingoo.adapter.SellingPriseShopAdapter;
 import com.oodi.jingoo.adapter.SupplierStoreAdapter;
+import com.oodi.jingoo.pojo.Selectsupplier;
 import com.oodi.jingoo.pojo.Store;
 import com.oodi.jingoo.pojo.Supplier;
 import com.oodi.jingoo.utility.AppUtils;
@@ -48,7 +53,9 @@ import java.util.List;
 import java.util.Map;
 
 public class ChooseSupliersActivity extends AppCompatActivity {
-
+    private CheckBox chk_select_all;
+    private static int count = 0;
+    private static boolean isNotAdded = true;
     TextView mTxtHeaderName , mTxtHome , mTxtListViewLine , mTxtGridViewline , Home , mTxtDoItLater , mTxtCopy;
     ImageView mImgBack ,  mImgList , mImgGrid , mImgWt;
     AppUtils appUtils ;
@@ -64,7 +71,7 @@ public class ChooseSupliersActivity extends AppCompatActivity {
     List<Store> mStockList;
     SellingPriseShopAdapter mSellingPriseShopAdapter;
     android.app.AlertDialog alertDialog ;
-
+    SparseBooleanArray mChecked = new SparseBooleanArray();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -356,6 +363,7 @@ public class ChooseSupliersActivity extends AppCompatActivity {
         mTxtHome = (TextView) findViewById(R.id.txtHome);
         mImgBack = (ImageView) findViewById(R.id.imgBack);
         mRecSuppliers = (RecyclerView) findViewById(R.id.recSuppliers);
+        chk_select_all = (CheckBox) findViewById(R.id.filter_select_all);
         Home = (TextView) findViewById(R.id.Home);
         mBtnUpdate = (Button) findViewById(R.id.btnUpdate);
         mRecShopList = (RecyclerView) findViewById(R.id.recShopList);
@@ -394,8 +402,7 @@ public class ChooseSupliersActivity extends AppCompatActivity {
 
                         String status = jsonObject.optString("success");
 
-                        if(status.equals("1"))
-                        {
+                        if(status.equals("1")) {
 
                             JSONArray object = null;
                             try {
@@ -419,17 +426,17 @@ public class ChooseSupliersActivity extends AppCompatActivity {
 
                                     supplier.setId(id);
                                     supplier.setBrand_name(brand_name);
-                                    supplier.setBrand_image(getResources().getString(R.string.base_url)+brand_image);
+                                    supplier.setBrand_image(getResources().getString(R.string.base_url) + brand_image);
                                     supplier.setIs_selected(is_selected);
                                     supplier.setCompany_id(company_id);
 
-                                    if (is_selected.equals("0") ){
+                                    if (is_selected.equals("0")) {
                                         supplier.setSelected(false);
-                                    }else {
+                                    } else {
                                         supplier.setSelected(true);
                                     }
 
-                                    if (company_id.equals("1")){
+                                    if (company_id.equals("1")) {
                                         supplier.setSelected(true);
                                     }
 
@@ -445,10 +452,26 @@ public class ChooseSupliersActivity extends AppCompatActivity {
                             mRecSuppliers.setLayoutManager(mLayoutManager);
                             mRecSuppliers.setAdapter(mChooseSupplierListAdapter);
 
+                                if (chk_select_all.isChecked()) {
+
+                                        for (Supplier supplier : mSupplierList) {
+                                            supplier.setSelected(true);
+                                        }
+                                    } else {
+
+                                        for (Supplier supplier : mSupplierList) {
+                                            supplier.setSelected(false);
+                                        }
+                                    }
+
+                                    mChooseSupplierListAdapter.notifyDataSetChanged();
+                                }
+
                             /*RecyclerView.LayoutManager mLayoutManager1 = new GridLayoutManager(ChooseSupliersActivity.this , 3);
                             mRecSuppliers.setLayoutManager(mLayoutManager1);
                             mRecSuppliers.setAdapter(mChooseSuplierAdapter);*/
-                        }
+
+
 
                         pd.dismiss();
 
@@ -559,6 +582,40 @@ public class ChooseSupliersActivity extends AppCompatActivity {
                             RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(ChooseSupliersActivity.this);
                             mRecSuppliers.setLayoutManager(mLayoutManager);
                             mRecSuppliers.setAdapter(mChooseSupplierListAdapter);
+
+                                                         if (isNotAdded) {
+                                                             final View headerView = getLayoutInflater().inflate(R.layout.selectall_list_view_header,
+                                                                     mRecSuppliers, false);
+
+                                                             chk_select_all = (CheckBox) headerView.findViewById(R.id.filter_select_all);
+                                chk_select_all.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        for (int i = 0; i < count; i++) {
+                                            mChecked.put(i, chk_select_all.isChecked());
+                                        }
+
+                                /*    if (chk_select_all.isChecked()) {
+
+                                        for (Supplier supplier : mSupplierList) {
+                                            supplier.setSelected(true);
+                                        }
+                                    } else {
+
+                                        for (Supplier supplier : mSupplierList) {
+                                            supplier.setSelected(false);
+                                        }
+                                    }*/
+
+                                        mChooseSupplierListAdapter.notifyDataSetChanged();
+                                    }
+                                });
+                                                             /*
+                                                              * Add Header to ListView
+                                                              */
+                                                           //  mRecSuppliers.addHeaderView(headerView);
+                                                             isNotAdded = false;
+                            }
 
                             /*RecyclerView.LayoutManager mLayoutManager1 = new GridLayoutManager(ChooseSupliersActivity.this , 3);
                             mRecSuppliers.setLayoutManager(mLayoutManager1);

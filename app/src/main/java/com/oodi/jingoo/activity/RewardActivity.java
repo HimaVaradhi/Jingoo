@@ -357,10 +357,10 @@ public class RewardActivity extends AppCompatActivity {
 
     private void rewardUsersList() {
 
-        final ProgressDialog pd = new ProgressDialog(RewardActivity.this);
+      /*  final ProgressDialog pd = new ProgressDialog(RewardActivity.this);
         pd.setMessage("loading");
         pd.setCancelable(false);
-        pd.show();
+        pd.show();*/
 
         mRewardUserList.clear();
 
@@ -550,14 +550,14 @@ public class RewardActivity extends AppCompatActivity {
                         });*/
 
 
-                        pd.dismiss();
+                      //  pd.dismiss();
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         //Toast.makeText(LoginActivity.this,error.toString(),Toast.LENGTH_LONG).show();
-                        pd.dismiss();
+                    //    pd.dismiss();
 
                     }
                 }) {

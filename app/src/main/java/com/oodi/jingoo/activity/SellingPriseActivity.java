@@ -1,5 +1,6 @@
 package com.oodi.jingoo.activity;
 
+import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -514,8 +515,10 @@ public class SellingPriseActivity extends AppCompatActivity {
     }
 
     private void store_list() {
-
-        appUtils.showProgressBarLoading();
+//        final ProgressDialog pd = new ProgressDialog(SellingPriseActivity.this);
+//        pd.setMessage("loading");
+//        pd.show();
+//        //appUtils.showProgressBarLoading();
 
         String REGISTER_URL = SellingPriseActivity.this.getResources().getString(R.string.base_url) + "v1/index.php/appshopboth/store_list";
 
@@ -599,7 +602,7 @@ public class SellingPriseActivity extends AppCompatActivity {
                         }
 
                         try {
-                            appUtils.dismissProgressBar();
+                          //  appUtils.dismissProgressBar();
 
                             storeId = mStockList.get(0).getStore();
 
@@ -614,7 +617,7 @@ public class SellingPriseActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        appUtils.dismissProgressBar();
+                       // appUtils.dismissProgressBar();
                     }
                 }) {
             @Override
@@ -630,9 +633,9 @@ public class SellingPriseActivity extends AppCompatActivity {
     }
 
     private void get_products_selling_price() {
-
-        appUtils.showProgressBarLoading();
-
+        final ProgressDialog pd = new ProgressDialog(SellingPriseActivity.this);
+        pd.setMessage("loading");
+        pd.show();
         sellingProductNameList.clear();
         mSellingPriseList.clear();
 
@@ -869,8 +872,8 @@ public class SellingPriseActivity extends AppCompatActivity {
                         }
 
                         Log.e("list",sellingProductNameList +"");
-
-                        appUtils.dismissProgressBar();
+                        pd.dismiss();
+                       // appUtils.dismissProgressBar();
 
                 }
     },
@@ -879,7 +882,7 @@ public class SellingPriseActivity extends AppCompatActivity {
     {
         @Override
         public void onErrorResponse (VolleyError error){
-        appUtils.dismissProgressBar();
+     //   appUtils.dismissProgressBar();
     }
     })
 
@@ -904,11 +907,14 @@ public class SellingPriseActivity extends AppCompatActivity {
 
     private void get_products_selling_price_temp() {
 
-        try {
-            appUtils.showProgressBarLoading();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        try {
+//            final ProgressDialog pd = new ProgressDialog(SellingPriseActivity.this);
+//            pd.setMessage("loading");
+//            pd.show();
+//          //  appUtils.showProgressBarLoading();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
 
         sellingProductNameList.clear();
         mSellingPriseList.clear();
@@ -1148,7 +1154,7 @@ public class SellingPriseActivity extends AppCompatActivity {
                         Log.e("list",sellingProductNameList +"");
 
                         try {
-                            appUtils.dismissProgressBar();
+                           // appUtils.dismissProgressBar();
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -1160,7 +1166,7 @@ public class SellingPriseActivity extends AppCompatActivity {
                 {
                     @Override
                     public void onErrorResponse (VolleyError error){
-                        appUtils.dismissProgressBar();
+                       // appUtils.dismissProgressBar();
                     }
                 })
 
@@ -1180,7 +1186,11 @@ public class SellingPriseActivity extends AppCompatActivity {
 
     private void update_products_selling_price() {
 
-        appUtils.showProgressBarLoading();
+       /* final ProgressDialog pd = new ProgressDialog(SellingPriseActivity.this);
+        pd.setMessage("loading");
+        pd.show();*/
+
+       // appUtils.showProgressBarLoading();
 
         String REGISTER_URL = SellingPriseActivity.this.getResources().getString(R.string.base_url) + "v1/index.php/appshopboth/update_products_selling_price";
 
@@ -1219,7 +1229,7 @@ public class SellingPriseActivity extends AppCompatActivity {
                         }
                         Toast.makeText(SellingPriseActivity.this , jsonObject.optString("msg"),Toast.LENGTH_LONG).show();
 
-                        appUtils.dismissProgressBar();
+                      //  appUtils.dismissProgressBar();
 
                     }
 
@@ -1227,7 +1237,7 @@ public class SellingPriseActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        appUtils.dismissProgressBar();
+                        //appUtils.dismissProgressBar();
                     }
                 }) {
             @Override

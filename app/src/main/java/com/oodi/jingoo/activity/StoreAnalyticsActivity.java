@@ -546,9 +546,7 @@ public class StoreAnalyticsActivity extends AppCompatActivity {
         webLnC.getSettings().setLoadsImagesAutomatically(true);
         webLnC.getSettings().setJavaScriptEnabled(true);
         webLnC.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-
         webLnC.loadUrl(StoreAnalyticsActivity.this.getResources().getString(R.string.base_url)+"v1/index.php/appshopboth/report_chart?token="+token+"&store_id="+store_id+"&from_date="+startDate+"&to_date="+endDate+"&type="+type+"&report_type="+report_type);
-
     }
 
     public BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {

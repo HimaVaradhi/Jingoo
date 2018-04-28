@@ -52,7 +52,6 @@ public class YourPointsFragment extends Fragment {
     ImageView imgExpand ;
     LinearLayout lnrExpand , lnrHistory , lnrSO;
     TextView txtStoreName , txtStorePoint ;
-
     RecyclerView recCsmList , recRewards;
     List<CSM> csmList = new ArrayList<>();
     CSMListAdapter csmListAdapter ;
@@ -93,7 +92,7 @@ public class YourPointsFragment extends Fragment {
 
         if (!type.equals("csm")){
             lnrSO.setVisibility(View.GONE);
-            txtStoreName.setText("Earnings: ");
+            txtStoreName.setText("");
 
         }
 
