@@ -119,4 +119,5 @@ public class ChooseSuplierAdapter extends RecyclerView.Adapter<ChooseSuplierAdap
     public int getItemCount() {
         return mSupplierList.size();
     }
+
 }
