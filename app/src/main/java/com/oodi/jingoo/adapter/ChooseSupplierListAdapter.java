@@ -23,11 +23,11 @@ import java.util.List;
 public class ChooseSupplierListAdapter extends RecyclerView.Adapter<ChooseSupplierListAdapter.MyViewHolder>{
 
     Activity mContext ;
-    List<Supplier> mRewardUserList ;
+    List<Supplier> mSupplierList ;
 
     public ChooseSupplierListAdapter(Activity mContext, List<Supplier> mRewardUserList) {
         this.mContext = mContext ;
-        this.mRewardUserList = mRewardUserList ;
+        this.mSupplierList = mRewardUserList ;
     }
 
 
@@ -61,7 +61,7 @@ public class ChooseSupplierListAdapter extends RecyclerView.Adapter<ChooseSuppli
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
 
-        final Supplier supplier = mRewardUserList.get(position);
+        final Supplier supplier = mSupplierList.get(position);
 
         if (supplier.isSelected()){
             holder.cbSelected.setChecked(true);
@@ -110,7 +110,18 @@ public class ChooseSupplierListAdapter extends RecyclerView.Adapter<ChooseSuppli
 
     @Override
     public int getItemCount() {
-        return mRewardUserList.size();
+        return mSupplierList.size();
     }
-
+  public void checkedState(List<Supplier> mSupplierList, boolean b) {
+        if(b) {
+            for (Supplier supplier : mSupplierList) {
+                supplier.setSelected(true);
+            }
+        }else{
+            for (Supplier supplier : mSupplierList) {
+                supplier.setSelected(false);
+            }
+        }
+        notifyDataSetChanged();
+    }
 }
